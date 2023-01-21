@@ -3,6 +3,8 @@ import Main from '.././../layouts//Main'
 import Home from '../../../src///Pages///Home/////Home////////Home'
 import Login from '../../.././src////Pages////Login//////Login'
 import SignUp from '../../../././src//////Pages////////SignpUp//////////////////////////////SignUp'
+import Cart from "../../Pages/Cart/Cart";
+import ProductDetails from "../../../src////Pages///Home///Products///ProductDetails"
 const router = createBrowserRouter([
     {
         path: '/',
@@ -20,6 +22,15 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp/>
+            },
+            {
+                path: '/cart',
+                element: <Cart/>
+            },
+            {
+                path: `/product/:id`,
+                element: <ProductDetails/>
+
             }
         ]
     }
