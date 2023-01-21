@@ -8,7 +8,7 @@ const Header = () => {
         <Link to="/">Home</Link>
       </li>
       <li className="font-semibold">
-        <Link to="/products">Products</Link>
+        <Link to="/">Products</Link>
       </li>
       <li className="font-semibold indicator">
         <span className="indicator-item">99+</span>
@@ -51,9 +51,8 @@ const Header = () => {
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn bg-blue-600 border-0 text-white hover:bg-blue-700 ">
-          Login
-        </button>
+      <Link to='/login' className="btn bg-blue-600 border-0 text-white hover:bg-blue-700 "> Login
+       </Link>  
       </div>
     </div>
   );
