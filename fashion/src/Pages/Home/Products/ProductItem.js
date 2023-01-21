@@ -10,11 +10,11 @@ const ProductItem = ({ d }) => {
       <div className="card-body">
         <h2 className="card-title">
           {name}
-          <div className="badge badge-secondary">${price}</div>
+          <div className="badge badge-secondary bg-blue-600 hover:bg-blue-700 border-0">${price}</div>
         </h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="card-actions justify-end">
-          <div className="badge btn badge-outline">Add To Cart</div>
+          <div className="btn bg-blue-600 border-0 text-white hover:bg-blue-700">Add To Cart</div>
         </div>
       </div>
     </div>

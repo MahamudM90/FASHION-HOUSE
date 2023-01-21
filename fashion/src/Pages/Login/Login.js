@@ -47,7 +47,9 @@ const LogIn = () => {
 
   return (
     <div className="lg:px-56 bg-base-200 pb-20">
-      <h1 className="text-3xl text-center font-bold py-10">Login</h1>
+      <div className="py-10 flex justify-center items-center">
+        <h1 className="text-3xl text-center font-bold bg-white p-5 w-fit shadow-lg">LogIn</h1>
+      </div>
 
       <div className="flex justify-center">
         <Form
@@ -99,7 +101,7 @@ const LogIn = () => {
               )}
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">LogIn</button>
+              <button className="btn bg-blue-600 border-0 text-white hover:bg-blue-700">LogIn</button>
             </div>
 
             <div className="form-control">
