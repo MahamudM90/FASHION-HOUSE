@@ -4,9 +4,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+       <div data-theme="lofi">
       <RouterProvider router={router}/>
-    </div>
+      </div>
   );
 }
 
