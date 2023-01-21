@@ -5,13 +5,11 @@ import { useParams } from "react-router-dom";
 const ProductDetails = () => {
   const [product, setProduct] = React.useState({});
   const { id } = useParams();
-  console.log(id);
 
   React.useEffect(() => {
     axios
       .get(`products.json`)
       .then((response) => {
-        console.log(response.data);
         setProduct(response.data);
       })
       .catch((error) => {
@@ -32,7 +30,10 @@ const ProductDetails = () => {
             product.map((item) => {
               if (item.id == id) {
                 return (
-                  <div className="card w-82 bg-base-100 shadow-xl">
+                  <div
+                    className="card w-82 bg-base-100 shadow-xl"
+                    key={item.id}
+                  >
                     <figure>
                       <img
                         className="h-72 w-fit"
@@ -48,7 +49,7 @@ const ProductDetails = () => {
                         </div>
                       </h2>
                       <p>{item.description}</p>
-                      <div className="card-actions justify-center">
+                      <div className="card-actions justify-center mt-2">
                         <div className="btn bg-blue-600 border-0 text-white hover:bg-blue-700">
                           Add To Cart
                         </div>

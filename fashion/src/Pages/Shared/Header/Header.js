@@ -8,7 +8,7 @@ const Header = () => {
         <Link to="/">Home</Link>
       </li>
       <li className="font-semibold">
-        <Link to="/">Products</Link>
+        <Link to="/products">Products</Link>
       </li>
       <li className="font-semibold indicator">
         <span className="indicator-item">99+</span>
@@ -44,15 +44,27 @@ const Header = () => {
           </ul>
         </div>
         <Link to="/" className=" ghost-btn normal-case text-xl">
-            <img src={logo} alt="logo" className="h-16 w-16" />
+          <img src={logo} alt="logo" className="h-16 w-16" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-      <Link to='/login' className="btn bg-blue-600 border-0 text-white hover:bg-blue-700 "> Login
-       </Link>  
+        <Link
+          to="/dashboard"
+          className="btn bg-blue-600 border-0 text-white hover:bg-blue-700 "
+        >
+          {" "}
+          Admin Dashboard
+        </Link>
+        <Link
+          to="/login"
+          className="btn bg-blue-600 border-0 text-white hover:bg-blue-700 ml-2"
+        >
+          {" "}
+          Login
+        </Link>
       </div>
     </div>
   );
