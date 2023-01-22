@@ -3,7 +3,7 @@
 ## How to Install Local Machine
 
 
-1. Clone repo using `git clone https://github.com/MahamudM90/fashion-house`
+1. Clone repo using `git clone https://github.com/MahamudM90/fashion-house.git`
 2. Change directory using `cd fashion`
 3. Install all dependencies using `npm install`
 4. Firebase Config 
