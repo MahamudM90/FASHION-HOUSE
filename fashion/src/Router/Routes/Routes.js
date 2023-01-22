@@ -7,6 +7,11 @@ import Cart from "../../Pages/Cart/Cart";
 import ProductDetails from "../../../src////Pages///Home///Products///ProductDetails";
 import Products from "../../../src////Pages///Home///Products///Products";
 import Dashboard from "../../../src////Pages////Dashboard////Dashboard";
+import AllCustomer from "../../.././src/////Pages/////Dashboard/////AllCustomer///AllCustomer"
+import AddCustomer from "../../Pages/Dashboard/AddCustomer/AddCustomer";
+import OrderList from "../../Pages/Dashboard/OrderList/OrderList";
+import ProductList from "../../Pages/Dashboard/ProductList/ProductList";
+import AddProduct from "../../Pages/Dashboard/AddProduct/AddProduct";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +45,27 @@ const router = createBrowserRouter([
         path: `/product/:id`,
         element: <ProductDetails />,
       },
+      {
+        path: "/dashboard/allcustomer",
+        element: <AllCustomer/>
+
+      },
+      {
+        path: "/dashboard/addcustomer",
+        element: <AddCustomer />
+      },
+      {
+        path: "/dashboard/orderlist",
+        element: <OrderList/>
+      },
+      {
+        path: "product",
+        element: <ProductList/>
+      },
+      {
+        path: "/dashboard/addproduct",
+        element: <AddProduct/>
+      }
     ],
   },
 ]);
