@@ -10,7 +10,7 @@
 5. Run the Project using `npm start`
 
 ## Live Deployed Link Below 
-[ Link](https://fashion-housemahamud.netlify.app) 
+Feel free to visit 👉 https://fashion-housemahamud.netlify.app
 
 
 
