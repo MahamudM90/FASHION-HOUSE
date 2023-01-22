@@ -1,4 +1,4 @@
-# fashion-house ![GitHub last commit](https://github.com/MahamudM90/fashion-house?color=blue&label=Task%20Syntax%20Project%20Last%20Commit&logo=github&logoColor=blue&style=social)
+# fashion-house !
 
 ### Admin Email & Pass
 Email: `mahamud@gmail.com` <br>
