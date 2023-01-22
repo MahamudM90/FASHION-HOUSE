@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { Form, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import toast from "react-hot-toast";
-import useToken from "../../hooks/useToken";
 
 const SignUp = () => {
   const {
@@ -14,13 +13,10 @@ const SignUp = () => {
   const { createUser, updateUser } = useContext(AuthContext);
   const [signUpError, setSignUpError] = useState("");
   const [createdUserEmail, setCreatedUserEmail] = useState("");
-  const [token] = useToken(createdUserEmail);
+  
   const navigate = useNavigate();
 
-  if (token) {
-    navigate("/");
-  }
-
+  
   const onSubmit = (data) => {
     console.log(data);
     setSignUpError("");
@@ -51,17 +47,7 @@ const SignUp = () => {
 
   const saveUser = (name, email, role) => {
     const user = { name, email, role };
-    fetch("https://task-syntax.vercel.app/users", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setCreatedUserEmail(email, name);
-      });
+   
   };
   return (
     <div className="lg:px-56 bg-base-200 pb-20">

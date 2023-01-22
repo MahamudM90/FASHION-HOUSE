@@ -10,20 +10,18 @@ const Cart = () => {
       </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full shadow-lg">
-          <thead>
+          <thead className="text-center">
             <tr className="text-center">
               <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
+                Serial
               </th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>Product Name</th>
+              <th>Customer Detail</th>
+              <th>Quantity</th>
               <th>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-center">
             {[1, 2, 3].map((item) => {
               return (
                 <tr className="text-center">
@@ -33,29 +31,39 @@ const Cart = () => {
                     </label>
                   </th>
                   <td>
-                    <div className="flex items-center space-x-3">
+                    <div className="flex justify-center items-center space-x-3">
                       <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
-                          <img
-                            src="/tailwind-css-component-profile-2@56w.png"
+                          <img className="h-12 w-12 mask mask-squircle"
+                            src="https://pngimg.com/d/running_shoes_PNG5782.png"
                             alt="Avatar Tailwind CSS Component"
                           />
                         </div>
                       </div>
                       <div>
-                        <div className="font-bold">Hart Hagerty</div>
-                        <div className="text-sm opacity-50">United States</div>
+                        <div className="font-bold">ProductName 1</div>
+                        <div className="text-sm opacity-50">Dhaka, BD</div>
                       </div>
                     </div>
                   </td>
                   <td>
-                    Zemlak, Daniel and Leannon
+                    Name: John Doe, Address: Dhaka, BD
                     <br />
                     <span className="badge badge-ghost badge-sm">
-                      Desktop Support Technician
+                      Price: 1000
                     </span>
                   </td>
-                  <td>Purple</td>
+                  <td>
+                    <div className="flex justify-center items-center space-x-3">
+                      <button className="btn btn-sm btn-square btn-ghost">
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
+                      <div className="bg-base-200 px-5">1</div>
+                      <button className="btn btn-sm btn-square btn-ghost">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </div>
+                  </td>
                   <th>
                     <button className="btn bg-blue-600 hover:bg-blue-700 border-0 btn-xs mr-2">Edit</button>
                     <button className="btn btn-warning btn-xs">Delete</button>
