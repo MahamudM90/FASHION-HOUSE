@@ -12,9 +12,6 @@ const LogIn = () => {
     formState: { errors },
   } = useForm();
   const { signInUser } = useContext(AuthContext);
-  const [signUpError, setSignUpError] = useState("");
-  const [loginUserEmail, setLoginUserEmail] = useState("");
-
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -23,19 +20,16 @@ const LogIn = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    setSignUpError("");
 
     signInUser(data.email, data.password)
       .then((result) => {
         const user = result.user;
         console.log(user);
         toast.success("You have been logged in");
-        setLoginUserEmail(data.email);
         navigate(from, { replace: true });
       })
       .catch((error) => {
         toast.error(error.message);
-        setSignUpError(error.message);
       });
 
     // reset form data after submit

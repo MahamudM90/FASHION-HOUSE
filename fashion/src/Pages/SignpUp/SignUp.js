@@ -10,16 +10,13 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { createUser, updateUser } = useContext(AuthContext);
-  const [signUpError, setSignUpError] = useState("");
-  const [createdUserEmail, setCreatedUserEmail] = useState("");
+  const { createUser } = useContext(AuthContext);
   
   const navigate = useNavigate();
 
   
   const onSubmit = (data) => {
     console.log(data);
-    setSignUpError("");
 
     createUser(data.email, data.password)
       .then((result) => {
@@ -27,28 +24,15 @@ const SignUp = () => {
         console.log(user);
         toast.success("Your account has been created");
         navigate("/login");
-        const userInfo = {
-          displayName: data.name,
-        };
-        updateUser(userInfo)
-          .then(() => {
-            saveUser(data.name, data.email, data.role);
-          })
-          .catch((err) => console.log(err));
       })
       .catch((error) => {
         toast.error(error.message);
-        setSignUpError(error.message);
       });
 
     // reset form data after submit
     document.getElementById("signup-form").reset();
   };
 
-  const saveUser = (name, email, role) => {
-    const user = { name, email, role };
-   
-  };
   return (
     <div className="lg:px-56 bg-base-200 pb-20">
       <div className="py-10 flex justify-center items-center">
@@ -73,11 +57,31 @@ const SignUp = () => {
                 {...register("Name", {
                   required: "**Name is Required",
                 })}
-                placeholder="Enter your name"
+                placeholder="John Doe"
                 className="input input-bordered"
               />
               {errors.name && (
                 <p className="text-red-700 mt-2">{errors.name?.message}</p>
+              )}
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Phone Number</span>
+              </label>
+              <input
+                type="tel"
+                {...register("phone", {
+                  required: "**Phone Number is Required",
+                  pattern: {
+                    value: /^[0-9]{11}$/,
+                    message: "**Invalid Phone Number",
+                  },
+                })}
+                placeholder="(+880) 1234567890"
+                className="input input-bordered"
+              />
+              {errors.phone && (
+                <p className="text-red-700 mt-2">{errors.phone?.message}</p>
               )}
             </div>
             <div className="form-control">
@@ -90,7 +94,7 @@ const SignUp = () => {
                   required: "**Email is Required",
                   pattern: { value: /^\S+@\S+$/i, message: "**Invalid Email" },
                 })}
-                placeholder="Enter your email"
+                placeholder="john@example.com"
                 className="input input-bordered"
               />
               {errors.email && (
@@ -115,7 +119,7 @@ const SignUp = () => {
                       "Password must have uppercase, number and special characters",
                   },
                 })}
-                placeholder="Enter your name"
+                placeholder="@Password123&@#"
                 className="input input-bordered"
               />
               {errors.password && (
