@@ -1,4 +1,4 @@
-# Task Syntax ![GitHub last commit](https://img.shields.io/github/last-commit/mahamudm90/fashion-house?color=blue&label=Task%20Syntax%20Project%20Last%20Commit&logo=github&logoColor=blue&style=social)
+# fashion-house ![GitHub last commit](https://img.shields.io/github/last-commit/mahamudm90/fashion-house?color=blue&label=fashion%20house%20Project%20Last%20Commit&logo=github&logoColor=blue&style=social)
 
 
 ### Admin Email & Pass
