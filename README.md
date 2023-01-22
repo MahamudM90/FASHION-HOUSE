@@ -2,7 +2,7 @@
 
 ## How to Install Local Machine
 
-### Client 
+
 1. Clone repo using `git clone https://github.com/MahamudM90/fashion-house`
 2. Change directory using `cd fashion`
 3. Install all dependencies using `npm install`
